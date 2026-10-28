@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="strings_vectors_dictionaries/strings_vectors_dictionaries.vcxproj" />
+</Solution>
