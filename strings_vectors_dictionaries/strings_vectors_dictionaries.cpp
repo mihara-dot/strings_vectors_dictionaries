@@ -46,13 +46,11 @@ int main() {
 
     if (position == string::npos) {
       cout << "NONE" << endl;
-    }
-    else {
+    } else {
       cout << position + 1 << endl;
     }
 
-  }
-  else if (part == 'B') {
+  } else if (part == 'B') {
     int count;
     if (!(cin >> count) || count < 0 || count > maxCount) {
       cout << "INVALID" << endl;
@@ -74,8 +72,7 @@ int main() {
 
     if (values.empty()) {
       cout << "EMPTY" << endl;
-    }
-    else {
+    } else {
       for (size_t elementIndex = 0; elementIndex < values.size(); ++elementIndex) {
         if (elementIndex > 0) {
           cout << " ";
@@ -85,8 +82,7 @@ int main() {
       cout << endl;
     }
 
-  }
-  else if (part == 'C') {
+  } else if (part == 'C') {
     int pairCount;
     if (!(cin >> pairCount) || pairCount < 0 || pairCount > maxCount) {
       cout << "INVALID" << endl;
@@ -115,8 +111,7 @@ int main() {
 
     if (values.empty()) {
       cout << "NONE" << endl;
-    }
-    else {
+    } else {
       auto minimumEntry = values.begin();
 
       for (auto entry = values.begin(); entry != values.end(); ++entry) {
@@ -129,8 +124,7 @@ int main() {
            << minimumEntry->second << endl;
     }
 
-  }
-  else if (part == 'D') {
+  } else if (part == 'D') {
     int count;
     if (!(cin >> count) || count < 0 || count > maxCount) {
       cout << "INVALID" << endl;
@@ -139,11 +133,10 @@ int main() {
     cin.ignore(numeric_limits<streamsize>::max(), '\n');
 
     map<string, vector<string>> itemOwners;
+    string name;
+    string item;
 
     for (int recordIndex = 0; recordIndex < count; ++recordIndex) {
-      string name;
-      string item;
-
       if (!getline(cin, name) || !getline(cin, item) || name.empty() || item.empty() || name.size() > maxTextLength || item.size() > maxTextLength || name.front() == ' ' || name.back() == ' ' || item.front() == ' ' || item.back() == ' ') {
         cout << "INVALID" << endl;
         return 1;
@@ -183,8 +176,7 @@ int main() {
       cout << "EMPTY" << endl;
     }
 
-  }
-  else {
+  } else {
     cout << "INVALID" << endl;
     return 1;
   }
